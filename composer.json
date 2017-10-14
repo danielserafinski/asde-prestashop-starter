@@ -1,0 +1,18 @@
+{
+    "name": "danielserafinski/asde-prestashop-starter",
+    "description": "ASDE PrestaShop Starter",
+    "homepage": "https://github.com/danielserafinski/asde-prestashop-starter",
+    "license": "AFL-3.0",
+    "authors": [
+        {
+            "name": "ASDE",
+            "email": "me@asde.pl"
+        }
+    ],
+    "require": {},
+    "config": {
+        "preferred-install": "dist"
+    },
+    "type": "prestashop-theme",
+    "author": "ASDE"
+}
