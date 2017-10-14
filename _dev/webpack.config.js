@@ -1,103 +1,114 @@
-/**
- * 2007-2017 PrestaShop
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
- *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2017 PrestaShop SA
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- * International Registered Trademark & Property of PrestaShop SA
- */
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var plugins = [];
 
-plugins.push(
-  new ExtractTextPlugin('../css/theme.css')
-);
+const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const bootstrapEntryPoints = require('./webpack.bootstrap.config.js');
+const path = require("path");
+process.traceDeprecation = true;
 
-module.exports = [{
-  // JavaScript
-  entry: [
-    './js/theme.js'
-  ],
-  output: {
-    path: '../assets/js',
-    filename: 'theme.js'
-  },
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ['babel-loader']
-    }]
-  },
-  externals: {
-    prestashop: 'prestashop'
-  },
-  plugins: plugins,
-  resolve: {
-    extensions: ['', '.js']
-  }
-}, {
-  // CSS
-  entry: [
-    './css/normalize.css',
-    './css/example.less',
-    './css/st/dev.styl',
-    './css/theme.scss'
-  ],
-  output: {
-    path: '../assets/js',
-    filename: 'theme.js'
-  },
-  module: {
-    loaders: [{
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!sass-loader?sourceMap"
-      )
-    }, {
-      test: /\.styl$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!stylus-loader?sourceMap"
-      )
-    }, {
-      test: /\.less$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!less-loader?sourceMap"
-      )
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract(
-        'style',
-        'css-loader?sourceMap!postcss-loader'
-      )
-    }, {
-      test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
-      loader: 'file-loader?name=../css/[hash].[ext]'
-    }]
-  },
-  plugins: plugins,
-  resolve: {
-    extensions: ['', '.scss', '.styl', '.less', '.css']
-  }
-}];
+module.exports = {
+	entry: [
+    	'tether',
+    	'font-awesome-loader',
+    	bootstrapEntryPoints.dev,
+		'./js/theme.ts'
+	],
+	output: {
+    	path: path.resolve(__dirname, "../assets/"),
+		filename: 'js/theme.js'
+    },
+    devtool: 'source-map',
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+				exclude: /node_modules/,
+                use: 'source-map-loader',
+            },            
+            {
+                test: /\.tsx?$/,
+				exclude: /node_modules/,
+                use: 'ts-loader',
+                
+            },
+            {
+				test: /\.(gif|png|jpe?g)$/i,
+				exclude: /node_modules/,
+				use: [
+ 					{ loader: 'file-loader', options: { context: 'src/images', name: 'images/[path][name].[ext]'} },
+					{
+						loader: 'image-webpack-loader',
+						query: {
+							mozjpeg: {
+								progressive: true
+							},
+							gifsicle: {
+								interlaced: false
+							},
+							optipng: {
+								optimizationLevel: 4
+							},
+							pngquant: {
+								quality: '75-90',
+								speed: 3
+							}
+						}
+					}					
+				]				
+            },
+			{ test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/, use: 'imports-loader?jQuery=jquery' },
+			{
+				test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				use: 'url-loader?limit=10000&name=fonts/[name]_[hash:6].[ext]',
+				
+			},
+			{
+				test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+				use: 'file-loader?name=fonts/[name]_[hash:6].[ext]',
+			}
+        ]
+    },
+    devServer: {
+        contentBase: path.join(__dirname, "../assets/"),
+        compress: true,
+        stats: "errors-only",
+        open: true
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"]
+    },
+    plugins: [
+		new webpack.LoaderOptionsPlugin({
+			debug: true
+		}),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			'Popper': 'popper.js',
+			"window.jQuery": "jquery",
+			Tether: "tether",
+			"window.Tether": "tether",
+			Alert: "exports-loader?Alert!bootstrap/js/dist/alert",
+			Button: "exports-loader?Button!bootstrap/js/dist/button",
+			Carousel: "exports-loader?Carousel!bootstrap/js/dist/carousel",
+			Collapse: "exports-loader?Collapse!bootstrap/js/dist/collapse",
+			Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+			Modal: "exports-loader?Modal!bootstrap/js/dist/modal",
+			Popover: "exports-loader?Popover!bootstrap/js/dist/popover",
+			Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
+			Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
+			Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
+			Util: "exports-loader?Util!bootstrap/js/dist/util"
+		}),
+        new ExtractTextPlugin({
+            filename: 'css/theme.css',
+            disable: false,
+            allChunks: true
+        }),
+        new CopyWebpackPlugin([
+           { from: 'static', to: 'static' }  
+        ])
+    ]
+};
