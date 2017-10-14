@@ -22,6 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+<!-- _partials/stylesheets.tpl -->
 {foreach $stylesheets.external as $stylesheet}
   <link rel="stylesheet" href="{$stylesheet.uri}" type="text/css" media="{$stylesheet.media}">
 {/foreach}
@@ -31,3 +32,4 @@
     {$stylesheet.content}
   </style>
 {/foreach}
+<!--/ _partials/stylesheets.tpl -->

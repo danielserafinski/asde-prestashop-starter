@@ -36,7 +36,7 @@
 
 {block name='header_logo'}
   <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
-    <img src="{$shop.logo}" alt="{$shop.name}">
+    <i class="fa fa-address-book" aria-hidden="true"></i><img src="{$shop.logo}" alt="{$shop.name}">
   </a>
 {/block}
 

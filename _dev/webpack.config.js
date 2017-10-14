@@ -1,17 +1,14 @@
-
-
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const bootstrapEntryPoints = require('./webpack.bootstrap.config.js');
 const path = require("path");
-process.traceDeprecation = true;
 
 module.exports = {
 	entry: [
     	'tether',
-    	'font-awesome-loader',
+//    	'font-awesome-loader',
     	bootstrapEntryPoints.dev,
 		'./js/theme.ts'
 	],
@@ -33,6 +30,20 @@ module.exports = {
                 use: 'ts-loader',
                 
             },
+			{
+            	test: /\.scss$/,
+            	use: [
+					{
+                		loader: "style-loader" // creates style nodes from JS strings
+            		},
+					{
+                		loader: "css-loader" // translates CSS into CommonJS
+            		},
+					{
+                		loader: "sass-loader" // compiles Sass to CSS
+            		},
+				]
+			},
             {
 				test: /\.(gif|png|jpe?g)$/i,
 				exclude: /node_modules/,
@@ -58,10 +69,24 @@ module.exports = {
 					}					
 				]				
             },
-			{ test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/, use: 'imports-loader?jQuery=jquery' },
+			{
+				test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/,
+				use: 'imports-loader?jQuery=jquery'
+			},
+			{
+				test: /font-awesome\.config\.js/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'font-awesome-loader'
+					},
+				],
+			},			
 			{
 				test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				use: 'url-loader?limit=10000&name=fonts/[name]_[hash:6].[ext]',
+				use: 'url-loader?name=fonts/[name]_[hash:6].[ext]',
 				
 			},
 			{
@@ -69,15 +94,6 @@ module.exports = {
 				use: 'file-loader?name=fonts/[name]_[hash:6].[ext]',
 			}
         ]
-    },
-    devServer: {
-        contentBase: path.join(__dirname, "../assets/"),
-        compress: true,
-        stats: "errors-only",
-        open: true
-    },
-    resolve: {
-        extensions: [".tsx", ".ts", ".js"]
     },
     plugins: [
 		new webpack.LoaderOptionsPlugin({
