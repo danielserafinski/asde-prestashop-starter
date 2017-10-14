@@ -17,6 +17,9 @@ module.exports = {
 		filename: 'js/theme.js'
     },
     devtool: 'source-map',
+	resolve: {
+    	extensions: [".tsx", ".ts", ".js"]
+    },
     module: {
         rules: [
             {
