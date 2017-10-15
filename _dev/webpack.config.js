@@ -51,7 +51,13 @@ module.exports = {
 				test: /\.(gif|png|jpe?g)$/i,
 				exclude: /node_modules/,
 				use: [
- 					{ loader: 'file-loader', options: { context: 'src/images', name: 'images/[path][name].[ext]'} },
+ 					{
+						loader: 'file-loader',
+						options: {
+							name: '[path][name]_[hash:6].[ext]',
+							publicPath: '../'
+						}  
+					},
 					{
 						loader: 'image-webpack-loader',
 						query: {
