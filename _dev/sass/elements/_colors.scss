@@ -1,0 +1,25 @@
+.color{
+	&-bg{
+		&--default{
+			
+		}
+		&--primary{
+			
+			@extend .bg-success;
+		}
+		&--secondary{
+			@extend .bg-warning;
+		}
+	}
+	&-text{
+		&--default{
+			
+		}		
+		&--primary{
+			@extend .text-danger;
+		}
+		&--secondary{
+			@extend .text-white;
+		}		
+	}	
+}

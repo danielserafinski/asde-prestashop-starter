@@ -1,0 +1,47 @@
+.product-miniature{
+	@extend .col-6;
+	position: relative;
+	&__thumbnail{
+		&-link{
+			
+		}
+		&-img{
+			@extend .img-fluid;
+		}
+	}
+	&__title{
+		font-size: 1rem;
+	}
+	&__description-short{
+		
+	}
+	&__actions{
+		&--add-to-cart{
+			@extend .btn;
+			@extend .btn-sm;
+			@extend .btn-primary;
+		}
+	}
+	&__flags{
+		@extend .list-unstyled;
+		position: absolute;
+		top: 0;
+		&-item{
+			@extend .px-2;
+			@extend .py-1;
+			@extend .mt-2;
+			font-size: 0.7rem;
+			&:first-of-type{
+				
+			}
+			&--new{
+				@extend .text-white;
+				@extend .bg-info;
+			}
+			&--discount{
+				@extend .text-white;
+				@extend .bg-danger;
+			}			
+		}
+	}
+}

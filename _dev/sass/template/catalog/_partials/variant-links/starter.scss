@@ -1,0 +1,14 @@
+.variant_links{
+	&__type{
+		@extend .d-inline-block;
+		@extend .rounded;
+		width: 1.25rem;
+		height: 1.25rem;
+		&--color{
+			
+		}
+	}
+	&__desc{
+		@extend .sr-only;
+	}
+}

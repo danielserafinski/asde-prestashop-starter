@@ -1,0 +1,26 @@
+.ps_customersignin{
+	@extend .align-self-center;
+	&__icon{
+		&--out{
+			@extend .icon--sign-out;
+		}
+		&--in{
+			@extend .icon--sign-in;
+		}		
+	}
+	&__icon-account{
+		@extend .icon--account;
+	}	
+	&__sign{
+		&--in{
+			
+		}
+		&--out{
+			
+		}		
+	}
+	&__account{
+	
+	}	
+	
+}

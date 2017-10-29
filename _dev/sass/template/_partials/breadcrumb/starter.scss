@@ -1,0 +1,17 @@
+.breadcrumb{
+	&__list{
+		@extend .breadcrumb;
+	}
+	&__item{
+		@extend .breadcrumb-item;
+		&:last-of-type{
+			
+		}
+	}
+	&__link{
+		
+	}
+	&__desc{
+		
+	}	
+}

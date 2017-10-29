@@ -1,0 +1,40 @@
+.header{
+	@extend .container-fluid;
+	@extend .p-0;
+	@extend .d-flex;
+	@extend .flex-wrap;
+	@extend .justify-content-between;
+	@extend .align-self-center;
+	
+	&__banner{
+		@extend .col-12;
+		@extend .p-2;
+	}
+	
+	&__nav{
+		@extend .align-self-center;
+		@extend .d-flex;
+		@extend .justify-content-end;
+		@extend .p-1;
+		
+	}
+	&__logo{
+		@extend .align-self-center;
+		@extend .d-flex;
+	}
+	
+	&__top{
+		@extend .p-0;
+		@extend .col-12;
+	}		
+}
+.logo{
+	@extend .d-inline-block;
+	@extend .align-self-center;	
+	&__name{
+		@extend .sr-only;
+	}
+	&__picture{
+		
+	}	
+}

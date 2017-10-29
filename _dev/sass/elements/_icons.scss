@@ -1,0 +1,22 @@
+.icon{
+	
+	&--cart{
+		@extend .fa;
+		@extend .fa-shopping-cart;
+	}
+	
+	&--sign{
+		&-in{
+			@extend .fa;
+			@extend .fa-sign-in;
+		}
+		&-out{
+			@extend .fa;
+			@extend .fa-sign-out;
+		}		
+	}
+	&--account{
+		@extend .fa;
+		@extend .fa-user;
+	}			
+}
