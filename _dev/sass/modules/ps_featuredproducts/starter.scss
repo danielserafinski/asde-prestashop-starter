@@ -1,0 +1,15 @@
+.featured-products{
+	&__title{
+		
+	}	
+	&__list{
+		@extend .products;
+	}
+	&__button{
+		@extend .btn;
+		@extend .btn-warning;
+		&-icon{
+			@extend .icon--more;
+		}
+	}	
+}

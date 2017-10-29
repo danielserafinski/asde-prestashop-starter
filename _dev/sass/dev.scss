@@ -15,6 +15,7 @@
 
 @import 'template/_partials/breadcrumb/starter';
 @import 'template/_partials/header/starter';
+@import 'template/catalog/products/starter';
 @import 'template/catalog/_partials/miniatures/product/starter';
 @import 'template/catalog/_partials/variant-links/starter';
 
@@ -22,7 +23,13 @@
 * MODULES
 **/
 @import 'modules/ps_customersignin/starter';
+@import 'modules/ps_featuredproducts/starter';
 @import 'modules/ps_mainmenu/starter';
 @import 'modules/ps_shoppingcart/starter';
 
-
+.page-content{
+	@extend .container;
+}
+.page-footer{
+	@extend .clearfix;
+}

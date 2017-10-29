@@ -18,5 +18,9 @@
 	&--account{
 		@extend .fa;
 		@extend .fa-user;
-	}			
+	}
+	&--more{
+		@extend .fa;
+		@extend .fa-chevron-right;
+	}	
 }
