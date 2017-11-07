@@ -7,8 +7,38 @@
     }
     &__item{
         @extend .list-inline-item;
+        &-desc{
+            @extend .sr-only;
+        }
         &-link{
-            
+            &:hover{
+                text-decoration: none;
+            }
+            font-size: 2rem;
+            &--twitter::before{
+               @extend .icon__font--twiter;
+            }  
+            &--facebook::before{
+               @extend .icon__font--facebook;
+            } 
+            &--googleplus::before{
+               @extend .icon__font--googleplus;
+            }
+            &--pinterest::before{
+               @extend .icon__font--pinterest;
+            }
+            &--vimeo::before{
+               @extend .icon__font--vimeo;
+            }
+            &--youtube::before{
+               @extend .icon__font--youtube;
+            } 
+            &--instagram::before{
+               @extend .icon__font--instagram;
+            }  
+            &--rss::before{
+               @extend .icon__font--rss;
+            }                  
         }   
     }    
 }

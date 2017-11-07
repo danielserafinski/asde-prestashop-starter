@@ -1,3 +1,10 @@
+@mixin icon-fonts($content) {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: $content;
+}
 .icon{
 	
 	&--cart{
@@ -30,5 +37,32 @@
 	&--newsletter{
 		@extend .fa;
 		@extend .fa-envelope;
-	}	    
+	}
+    &__font{
+        &--twiter{
+            @include icon-fonts("\f081");
+        }
+        &--facebook{
+            @include icon-fonts("\f082");
+        } 
+        &--googleplus{
+            @include icon-fonts("\f0d4"); 
+        }
+        &--pinterest{
+            @include icon-fonts("\f0d3"); 
+        } 
+        &--vimeo{
+            @include icon-fonts("\f194"); 
+        }
+        &--youtube{
+            @include icon-fonts("\f166"); 
+        }
+        &--instagram{
+            @include icon-fonts("\f16d");
+        }
+        &--rss{
+            @include icon-fonts("\f143");
+        }
+    }
+    
 }
