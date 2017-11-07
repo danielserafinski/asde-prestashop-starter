@@ -1,4 +1,4 @@
-.product-button-info{
+._product-button-info{
 	@extend .px-2;
 	@extend .py-1;
 	@extend .mt-2;
@@ -55,7 +55,7 @@
 		position: absolute;
 		top: 0;
 		&-item{
-			@extend .product-button-info;
+			@extend ._product-button-info;
 			&:first-of-type{
 				
 			}
@@ -73,7 +73,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		@extend .product-button-info;
+		@extend ._product-button-info;
 		&--available{
 			@extend .text-white;
 			@extend .bg-success;

@@ -23,4 +23,12 @@
 		@extend .fa;
 		@extend .fa-chevron-right;
 	}	
+	&--search{
+        @extend .fa;
+        @extend .fa-search;
+	}
+	&--newsletter{
+		@extend .fa;
+		@extend .fa-envelope;
+	}	    
 }

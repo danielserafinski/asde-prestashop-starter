@@ -1,0 +1,44 @@
+.ps_contactinfo{
+    @extend .col-12;
+    @extend .col-sm-6;
+    @extend .col-md-3;
+    @extend .justify-content-center;
+	&__block{
+		@extend .col-12;
+	}	
+	&__title{
+	}
+	&__desc{
+		
+	}
+	&__item{
+		&--phone{
+			
+		}
+		&--fax{
+			
+		}
+		&--email{
+			
+		}		
+	}
+	&__url{
+		&-link{
+			
+		}
+	}
+}
+
+.ps_contactinfo-nav{
+    @extend .align-self-center;
+	&__item{
+		&--phone{
+			
+		}	
+	} 
+	&__url{
+		&-link{
+			
+		}
+	}    
+}

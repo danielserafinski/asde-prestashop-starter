@@ -1,0 +1,31 @@
+.footer{
+    @extend .container-fluid;
+    @extend .bg-warning;
+
+    &__row{
+        @extend .row;
+        @extend .wrapper;
+        @extend .mx-auto;
+        @extend .d-flex;
+        @extend .flex-row;
+        @extend .bg-danger;
+    }
+    &-links{
+        @extend .col-12;
+        @extend .col-sm-6;
+        @extend .col-md-3;
+        @extend .justify-content-center;
+        &__title{
+
+        }    
+        &__list{
+            @extend .list-unstyled;
+        }
+        &__item{
+            &-link{
+
+            }   
+        }  
+    }    
+}
+

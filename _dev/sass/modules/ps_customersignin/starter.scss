@@ -6,11 +6,11 @@
 		}
 		&--in{
 			@extend .icon--sign-in;
-		}		
-	}
-	&__icon-account{
+		}
+        &--account{
 		@extend .icon--account;
-	}	
+	    }	
+	}
 	&__sign{
 		&--in{
 			
@@ -21,6 +21,8 @@
 	}
 	&__account{
 	
-	}	
-	
+	}
+    &__desc{
+        
+    }
 }

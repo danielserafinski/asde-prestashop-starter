@@ -7,6 +7,7 @@
 @import 'elements/_fonts';
 @import 'elements/_colors';
 @import 'elements/_icons';
+@import 'elements/forms';
 
 
 /**
@@ -15,6 +16,7 @@
 
 @import 'template/_partials/breadcrumb/starter';
 @import 'template/_partials/header/starter';
+@import 'template/_partials/footer/starter';
 @import 'template/catalog/products/starter';
 @import 'template/catalog/_partials/miniatures/product/starter';
 @import 'template/catalog/_partials/variant-links/starter';
@@ -22,14 +24,27 @@
 /**
 * MODULES
 **/
+@import 'modules/ps_banner/starter';
+@import 'modules/ps_contactinfo/starter';
+@import 'modules/ps_currencyselector/starter';
+@import 'modules/ps_customeraccountlinks/starter';
 @import 'modules/ps_customersignin/starter';
+@import 'modules/ps_customtext/starter';
+@import 'modules/ps_emailsubscription/starter';
 @import 'modules/ps_featuredproducts/starter';
+@import 'modules/ps_languageselector/starter';
+@import 'modules/ps_linklist/starter';
 @import 'modules/ps_mainmenu/starter';
+@import 'modules/ps_searchbar/starter';
 @import 'modules/ps_shoppingcart/starter';
+@import 'modules/ps_socialfollow/starter';
 
 .page-content{
 	@extend .container;
 }
 .page-footer{
 	@extend .clearfix;
+}
+.wrapper{
+    max-width: 1200px;
 }

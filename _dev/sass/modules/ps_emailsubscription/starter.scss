@@ -1,0 +1,25 @@
+.ps_emailsubscription{
+	@extend .col-12;
+	@extend .mx-auto;
+	@extend .mt-2;
+    max-width: 600px;
+    &__title{
+        
+    }
+    &__notification{
+        @extend .alert;
+        &--error{
+            @extend .alert-danger;
+        }
+        &--success{
+            @extend .alert-success;
+        }
+    } 
+    &__form{
+        @extend .mb-2;
+    }
+    &__conditions{
+        @extend .alert;
+        @extend .alert-info;
+    } 
+}

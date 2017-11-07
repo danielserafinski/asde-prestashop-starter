@@ -1,0 +1,12 @@
+.ps_banner{
+	@extend .col-12;
+	@extend .d-block;
+	@extend .mt-2;
+	@extend .p-0;
+	&__img{
+		@extend .img-fluid;
+	}
+	&__desc{
+		
+	}
+}

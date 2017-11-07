@@ -1,0 +1,14 @@
+.ps_socialfollow{
+	@extend .col-12;
+    &__list{
+        @extend .list-inline;
+        @extend .d-flex;
+        @extend .justify-content-end;
+    }
+    &__item{
+        @extend .list-inline-item;
+        &-link{
+            
+        }   
+    }    
+}

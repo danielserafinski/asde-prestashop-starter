@@ -1,0 +1,15 @@
+.ps_languageselector{
+    &__button{
+        @extend .btn;
+        @extend .btn-secondary;
+        @extend .dropdown-toggle;
+    }
+    &__menu{
+        &-item{
+            @extend .dropdown-item;
+            &--current{
+                
+            }
+        }
+    }    
+}

@@ -10,6 +10,11 @@
   },
   "author": "ASDE",
   "license": "AFL-3.0",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5"
+  },
   "devDependencies": {
     "@types/jquery": "^3.2.13",
     "babel-core": "^6.4.5",
@@ -30,13 +35,12 @@
     "jquery": "^3.2.1",
     "loader-utils": "^1.1.0",
     "node-sass": "^4.5.3",
-    "popper.js": "^1.12.5",
+    "popper.js": "^1.12.3",
     "postcss-loader": "^0.8.2",
     "resolve-url-loader": "^2.1.1",
     "sass-loader": "^6.0.6",
     "source-map-loader": "^0.2.2",
     "style-loader": "^0.13.2",
-    "tether": "^1.4.0",
     "ts-loader": "^2.3.7",
     "typescript": "^2.5.3",
     "url-loader": "^0.6.2",
