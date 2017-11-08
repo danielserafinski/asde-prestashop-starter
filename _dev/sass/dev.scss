@@ -39,12 +39,12 @@
 @import 'modules/ps_shoppingcart/starter';
 @import 'modules/ps_socialfollow/starter';
 
+#wrapper{
+background-color: aqua;
+}
 .page-content{
 	@extend .container;
 }
 .page-footer{
 	@extend .clearfix;
-}
-.wrapper{
-    max-width: 1200px;
 }

@@ -1,4 +1,8 @@
 .featured-products{
+  	@extend .col-12;
+    @extend .d-flex;
+    @extend .flex-wrap;
+    @extend .justify-content-start;  
 	&__title{
 		
 	}	
@@ -6,8 +10,14 @@
 		@extend .products;
 	}
 	&__button{
+		@extend .clearfix;
 		@extend .btn;
 		@extend .btn-warning;
+		@extend .d-inline-block;
+        
+        @extend .ml-auto;
+        @extend .mr-auto;
+        @extend .mr-md-0;
 		&-icon{
 			@extend .icon--more;
 		}

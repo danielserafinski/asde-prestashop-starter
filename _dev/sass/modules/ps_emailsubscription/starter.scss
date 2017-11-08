@@ -1,8 +1,10 @@
 .ps_emailsubscription{
-	@extend .col-12;
-	@extend .mx-auto;
+	@extend .col-8;
+	@extend .col-sm-6;
+	@extend .col-md-4;
+	@extend .col-lg-4;
+	@extend .col-xl-3;
 	@extend .mt-2;
-    max-width: 600px;
     &__title{
         
     }

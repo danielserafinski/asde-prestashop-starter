@@ -6,13 +6,17 @@
 }
 .product-miniature{
 	@extend .col-12;
-	@extend .col-sm-4;
+	@extend .col-sm-5;
 	@extend .col-md-4;
 	@extend .col-lg-3;
 	@extend .col-xl-3;
-	@extend .p-1;
 	@extend .text-center;
+	@extend .bg-info;
+	@extend .p-0;
+	@extend .my-2;
+	@extend .mx-1;
 	position: relative;
+    max-width: $product-max-width;
 	
 	&__thumbnail{
 		&-link{
@@ -73,6 +77,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+        
 		@extend ._product-button-info;
 		&--available{
 			@extend .text-white;

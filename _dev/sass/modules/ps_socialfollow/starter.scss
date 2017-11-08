@@ -1,9 +1,11 @@
 .ps_socialfollow{
 	@extend .col-12;
+
     &__list{
         @extend .list-inline;
         @extend .d-flex;
-        @extend .justify-content-end;
+        @extend .justify-content-center;
+        @extend .flex-nowrap;
     }
     &__item{
         @extend .list-inline-item;
