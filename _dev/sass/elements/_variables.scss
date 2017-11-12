@@ -1,10 +1,19 @@
-$default-color: #CCCCCC;
-$default-color-light: #EEEEEE;
-$brand-primary: #2fb5d2;
-$brand-secondary: #f39d72;
-$brand-success: #4cbb6c;
-$brand-warning: #ff9a52;
-$brand-danger: #ff4c4c;
+
+//Brand colors
+$asde-brand-primary: #ff0076;
+$asde-brand-secondary: #37d09b;
+$asde-font-color: #444446;
+
+$asde-color-new: #9ad091;
+$asde-color-discount: #eb6c93;
+$asde-color-instock--available: #89a1e3;
+$asde-color-instock--unavailable: #dee1e8;
+
+
+
+//Backgrounds
+$asde-bg-primary: #ebebeb;
+$asde-bg-secondary: #ffffff;
 
 //Maxymalna szerokość uzależniona od szerokosci miniatury
-$product-max-width: 250px;
+$asde-product-max-width: 250px;

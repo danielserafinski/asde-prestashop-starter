@@ -1,0 +1,12 @@
+@import '../../elements/_variables';
+$body-bg:    $asde-bg-primary;
+$body-color: $asde-font-color;
+$link-color: $asde-brand-secondary;
+$link-hover-color:  darken($asde-brand-secondary, 0.5);
+
+$btn-primary-color:  #FFF !default;
+/***
+Bootstrap global variables
+***/
+
+$enable-rounded: false;

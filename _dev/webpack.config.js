@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -38,7 +39,7 @@ module.exports = {
                 		loader: "style-loader" // creates style nodes from JS strings
             		},
 					{
-                		loader: "css-loader" // translates CSS into CommonJS
+                		loader: "css-loader", // translates CSS into CommonJS
             		},
 					{
                 		loader: "sass-loader" // compiles Sass to CSS
@@ -106,6 +107,9 @@ module.exports = {
 		new webpack.LoaderOptionsPlugin({
 			debug: true
 		}),
+        new UglifyJSPlugin({
+//            sourceMap: true
+        }),
 		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery",
@@ -127,7 +131,7 @@ module.exports = {
             filename: 'css/theme.css',
             disable: false,
             allChunks: true
-        }),
+        }),      
         new CopyWebpackPlugin([
            { from: 'static', to: 'static' }  
         ])

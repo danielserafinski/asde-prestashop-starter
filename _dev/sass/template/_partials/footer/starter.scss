@@ -1,9 +1,10 @@
 .footer{
     @extend .container-fluid;
-    @extend .bg-warning;
     @extend .d-flex;
     @extend .justify-content-center;
     @extend .flex-wrap;
+    @extend .bg-primary;
+    @extend .text-white;
 
     &-links{
         @extend .col-12;
@@ -11,14 +12,17 @@
         @extend .col-md-2;
 
         &__title{
-
+            @extend .text-white;
+            & a{
+                @extend .text-warning;
+            }
         }    
         &__list{
             @extend .list-unstyled;
         }
         &__item{
             &-link{
-
+                @extend .text-white;
             }   
         }  
     }

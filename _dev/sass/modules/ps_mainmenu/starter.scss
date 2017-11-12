@@ -1,8 +1,29 @@
+@keyframes mainmenu__pointer {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+    
+}
+@keyframes mainmenu__submenu {
+    from {
+        margin-top: -2rem;
+        opacity: 0.1;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
 .mainmenu{
 	z-index: 990;
-	background-color: beige;
+
 	@extend .col-12;
 	@extend .m-0;
+	@extend .mt-2;
 	@extend .p-0;
 	&-list{
 		list-style: none;
@@ -11,9 +32,9 @@
 		position: relative;
 		@extend .col-12;
 		@extend .btn-group;
-//		&:after{
-//			clear: both;
-//		}	
+		@extend .bg-primary;
+		
+        
 		&[data-depth="0"]{
 
 		}
@@ -21,16 +42,16 @@
 			display: none;	
 		}
 		&[data-depth="0"]{
-			background: blue;
+
 		}
 		&[data-depth="1"]{
-			background: red;
+
 		}
 		&[data-depth="2"]{
-			background: yellow;
+
 		}
 		&[data-depth="3"]{
-			background: #a700ff;
+
 		}
 		
 	}
@@ -40,43 +61,47 @@
 		@extend .d-inline-block;
 		&_link{
 			@extend .d-block;
-//  			white-space: nowrap;
 			@extend .p-3;
-			font-family: FontAwesome;
+			@extend .text-white;
+            text-decoration: none;
+
 			&:not([data-children="0"]):before{
 				display: inline-block;
-				content: "\f0de";
+				@extend .icon__font--pointer;
 				transform: rotate(90deg);
-
 			}
 			&:hover{
-				background-color: antiquewhite;
+                text-decoration: none;
+                @extend .bg-info;
 				&:not([data-children="0"]):before{
-					display: inline-block;
-					content: "\f0de";
-					transform: rotate(180deg);
+                    transform: rotate(180deg);
+                    animation-name: mainmenu__pointer;
+                    animation-duration: 0.5s;
 				}				
 			}
 		}
 		&:hover 
 		{
-			& > .mainmenu-list{
+            
+            & > .mainmenu-list{
 				@extend .d-block;
 				position: absolute;
 				left: 0;
+                animation-name: mainmenu__submenu;
+                animation-duration: 0.7s;                
 			}
 		}
 		&[data-depth="0"]{
-			background: blue;
+
 		}
 		&[data-depth="1"]{
-			background: red;
+
 		}
 		&[data-depth="2"]{
-			background: yellow;
+
 		}
 		&[data-depth="3"]{
-			background: #a700ff;
+
 		}		
 	}
 }

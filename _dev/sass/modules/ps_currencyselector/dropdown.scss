@@ -1,0 +1,15 @@
+.ps_currencyselector{
+    &__title{
+        @extend .btn;
+        @extend .btn-secondary;
+        @extend .dropdown-toggle;
+    }
+    &__menu{
+        &-item{
+            @extend .dropdown-item;
+            &--current{
+                
+            }
+        }
+    }    
+}

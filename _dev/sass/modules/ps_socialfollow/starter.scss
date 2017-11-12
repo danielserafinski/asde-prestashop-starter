@@ -13,6 +13,7 @@
             @extend .sr-only;
         }
         &-link{
+            @extend .text-warning;
             &:hover{
                 text-decoration: none;
             }

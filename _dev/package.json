@@ -4,7 +4,7 @@
   "description": "Prestashop 1.7 Theme Starter",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress -p",
+    "build": "webpack --progress",
     "watch": "webpack --progress --colors --watch",
     "debug": "webpack --progress --colors --debug --devtool source-map --output-pathinfo --display-chunks --watch"
   },
@@ -37,12 +37,13 @@
     "node-sass": "^4.5.3",
     "popper.js": "^1.12.3",
     "postcss-loader": "^0.8.2",
-    "resolve-url-loader": "^2.1.1",
+    "resolve-url-loader": "^2.2.0",
     "sass-loader": "^6.0.6",
     "source-map-loader": "^0.2.2",
     "style-loader": "^0.13.2",
     "ts-loader": "^2.3.7",
     "typescript": "^2.5.3",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "url-loader": "^0.6.2",
     "webpack": "^2.7.0"
   },

@@ -39,8 +39,16 @@
 @import 'modules/ps_shoppingcart/starter';
 @import 'modules/ps_socialfollow/starter';
 
+
+//body{
+//    background-image: url(../images/bg1.jpg);
+//    background-position: top center;
+//    background-repeat: no-repeat;
+//}
+
+
 #wrapper{
-background-color: aqua;
+
 }
 .page-content{
 	@extend .container;
@@ -48,3 +56,4 @@ background-color: aqua;
 .page-footer{
 	@extend .clearfix;
 }
+

@@ -63,6 +63,9 @@
         &--rss{
             @include icon-fonts("\f143");
         }
+        &--pointer{
+            @include icon-fonts("\f0de");
+        }        
     }
     
 }

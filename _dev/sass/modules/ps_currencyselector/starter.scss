@@ -1,15 +1,19 @@
 .ps_currencyselector{
-    &__button{
-        @extend .btn;
-        @extend .btn-secondary;
-        @extend .dropdown-toggle;
+    @extend .mr-3;
+    &__title{
+        @extend .d-none;
+        @extend .d-xl-inline-block;
+        @extend .d-lg-inline-block;
     }
     &__menu{
+        @extend .d-inline-block;
         &-item{
-            @extend .dropdown-item;
+            &:not(:first-child):before{
+               
+            }
             &--current{
-                
+                font-weight: bold;
             }
         }
-    }    
+    }   
 }
