@@ -22,19 +22,18 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='variant_links'}
-  <div class="variant_links">
-    {foreach from=$variants item=variant}
-
-      {block name='variant_link_item'}
-        <a href="{$variant.url}"
-           class="variant_links__type variant_links__type--{$variant.type}"
-          {if $variant.type === "color"} style="background-color: {$variant.html_color_code}" {/if}
-        >
-          <span class="variant_links__desc">{$variant.name}</span>
+<div id="_desktop_cart" class="ps_shoppingcart">
+  <div class="ps_shoppingcart__element ps_shoppingcart__element--{if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
+    <div class="ps_shoppingcart__button">
+      {if $cart.products_count > 0}
+        <a rel="nofollow" class="ps_shoppingcart__button-link" href="{$cart_url}">
+      {/if}
+        <i class="ps_shoppingcart__button-icon"></i>
+        <span class="ps_shoppingcart__button-desc">{l s='Cart' d='Shop.Theme.Checkout'}</span>
+        <span class="ps_shoppingcart__button-count">({$cart.products_count})</span>
+      {if $cart.products_count > 0}
         </a>
-      {/block}
-
-    {/foreach}
+      {/if}
+    </div>
   </div>
-{/block}
+</div>

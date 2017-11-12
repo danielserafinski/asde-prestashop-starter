@@ -22,19 +22,16 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='variant_links'}
-  <div class="variant_links">
-    {foreach from=$variants item=variant}
-
-      {block name='variant_link_item'}
-        <a href="{$variant.url}"
-           class="variant_links__type variant_links__type--{$variant.type}"
-          {if $variant.type === "color"} style="background-color: {$variant.html_color_code}" {/if}
-        >
-          <span class="variant_links__desc">{$variant.name}</span>
-        </a>
-      {/block}
-
+<section class="featured-products">
+  <h2 class="featured-products__title">
+    {l s='Popular Products' d='Shop.Theme.Catalog'}
+  </h2>
+  <div class="featured-products__list">
+    {foreach from=$products item="product"}
+      {include file="catalog/_partials/miniatures/product.tpl" product=$product}
     {/foreach}
   </div>
-{/block}
+  <a class="featured-products__button" href="{$allProductsLink}">
+    {l s='All products' d='Shop.Theme.Catalog'}<i class="featured-products__button-icon"></i>
+  </a>
+</section>

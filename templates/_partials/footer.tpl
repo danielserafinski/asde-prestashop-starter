@@ -34,11 +34,11 @@
   {hook h='displayFooterAfter'}
 {/block}
 
-<p>
+<nav class="footer__copyright">
   {block name='copyright_link'}
-    <a class="_blank" href="http://www.prestashop.com" target="_blank">
+    <a class="_blank" href="http://www.prestashop.com" target="_blank" rel="nofollow">
       {l s='%copyright% %year% - Ecommerce software by %prestashop%'
       sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
     </a>
   {/block}
-</p>
+</nav>

@@ -22,13 +22,13 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<nav data-depth="{$breadcrumb.count}">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<nav class="breadcrumb" data-depth="{$breadcrumb.count}">
+  <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
     {foreach from=$breadcrumb.links item=path name=breadcrumb}
       {block name='breadcrumb_item'}
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a itemprop="item" href="{$path.url}">
-            <span itemprop="name">{$path.title}</span>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a class="breadcrumb__link" itemprop="item" href="{$path.url}">
+            <span class="breadcrumb__desc" itemprop="name">{$path.title}</span>
           </a>
           <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
         </li>

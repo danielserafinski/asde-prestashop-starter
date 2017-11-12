@@ -23,25 +23,28 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='header_banner'}
-  <div class="header-banner">
+  <aside class="header__banner">
     {hook h='displayBanner'}
-  </div>
+  </aside>
 {/block}
 
 {block name='header_nav'}
-  <div class="header-nav">
+  <nav class="header__nav">
     {hook h='displayNav'}
-  </div>
+  </nav>
 {/block}
 
 {block name='header_logo'}
+ <nav class="header__logo">
   <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
-    <i class="fa fa-address-book" aria-hidden="true"></i><img src="{$shop.logo}" alt="{$shop.name}">
+    <h1 class="logo__name">{$shop.name}</h1>
+    <img class="logo__pictrue" src="{$shop.logo}" alt="{$shop.name}">
   </a>
+ </nav>
 {/block}
 
 {block name='header_top'}
-  <div class="header-top">
+  <div class="header__top">
     {hook h='displayTop'}
   </div>
 

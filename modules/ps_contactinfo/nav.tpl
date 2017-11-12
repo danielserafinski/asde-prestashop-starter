@@ -22,19 +22,19 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='variant_links'}
-  <div class="variant_links">
-    {foreach from=$variants item=variant}
-
-      {block name='variant_link_item'}
-        <a href="{$variant.url}"
-           class="variant_links__type variant_links__type--{$variant.type}"
-          {if $variant.type === "color"} style="background-color: {$variant.html_color_code}" {/if}
-        >
-          <span class="variant_links__desc">{$variant.name}</span>
-        </a>
-      {/block}
-
-    {/foreach}
-  </div>
-{/block}
+<div class="ps_contactinfo-nav">
+    {if $contact_infos.phone}
+      {* [1][/1] is for a HTML tag. *}
+      {l
+        s='Call us: [1]%phone%[/1]'
+        sprintf=[
+          '[1]' => '<span class="ps_contactinfo-nav__item ps_contactinfo-nav__item--phone">',
+          '[/1]' => '</span>',
+          '%phone%' => $contact_infos.phone
+        ]
+        d='Shop.Theme.Global'
+      }
+    {else}
+      <a  class="ps_contactinfo-nav__url-link" href="{$urls.pages.contact}">{l s='Contact us' d='Shop.Theme.Global'}</a>
+    {/if}
+</div>

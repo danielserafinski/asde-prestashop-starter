@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list">
+<div id="js-product-list" class="products">
   {foreach from=$listing.products item="product"}
     {block name='product_miniature'}
       {include file='catalog/_partials/miniatures/product.tpl' product=$product}

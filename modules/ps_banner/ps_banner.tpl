@@ -22,19 +22,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='variant_links'}
-  <div class="variant_links">
-    {foreach from=$variants item=variant}
-
-      {block name='variant_link_item'}
-        <a href="{$variant.url}"
-           class="variant_links__type variant_links__type--{$variant.type}"
-          {if $variant.type === "color"} style="background-color: {$variant.html_color_code}" {/if}
-        >
-          <span class="variant_links__desc">{$variant.name}</span>
-        </a>
-      {/block}
-
-    {/foreach}
-  </div>
-{/block}
+<a class="ps_banner" href="{$banner_link}" title="{$banner_desc}">
+  {if isset($banner_img)}
+    <img src="{$banner_img}" alt="{$banner_desc}" title="{$banner_desc}" class="ps_banner__img">
+  {else}
+    <span class="ps_banner__desc">{$banner_desc}</span>
+  {/if}
+</a>

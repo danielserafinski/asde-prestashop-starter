@@ -27,9 +27,11 @@
 {/foreach}
 
 {foreach $javascript.inline as $js}
-  <script type="text/javascript">
+
+   <script type="text/javascript">
     {$js.content nofilter}
   </script>
+
 {/foreach}
 
 {if isset($vars) && $vars|@count}

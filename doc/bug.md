@@ -1,5 +1,39 @@
 ## TODO:
+W plikach z bootspwatch jest problem (solar: linia 144-169), chodzi o wersje bootstrapa i migracje na aplha->beta
+//$spacers: (
+//  0: (
+//    x: 0,
+//    y: 0
+//  ),
+//  1: (
+//    x: ($spacer-x * .25),
+//    y: ($spacer-y * .25)
+//  ),
+//  2: (
+//    x: ($spacer-x * .5),
+//    y: ($spacer-y * .5)
+//  ),
+//  3: (
+//    x: $spacer-x,
+//    y: $spacer-y
+//  ),
+//  4: (
+//    x: ($spacer-x * 1.5),
+//    y: ($spacer-y * 1.5)
+//  ),
+//  5: (
+//    x: ($spacer-x * 3),
+//    y: ($spacer-y * 3)
+//  )
+//) !default;
 
+-----------------
+
+modules/ps_shoppingcart/modal.tpl
+obsługa modali zrobić 
+
+## MENU
+https://www.bootply.com/109271#
 
 ## TEST
 

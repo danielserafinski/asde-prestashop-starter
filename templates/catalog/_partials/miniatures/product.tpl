@@ -2,28 +2,29 @@
   <article class="product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
 
     {block name='product_thumbnail'}
-      <a href="{$product.url}" class="thumbnail product-thumbnail">
+      <a href="{$product.url}" class="product-miniature__thumbnail-link">
         <img
           src = "{$product.cover.medium.url}"
           alt = "{$product.cover.legend}"
+          class="product-miniature__thumbnail-img"
           data-full-size-image-url = "{$product.cover.large.url}"
         >
       </a>
     {/block}
 
     {block name='product_name'}
-      <h1 class="h2" itemprop="name"><a href="{$product.url}">{$product.name}</a></h1>
+      <h3 class="product-miniature__title" itemprop="name"><a href="{$product.url}">{$product.name}</a></h3>
     {/block}
 
     {block name='product_description_short'}
-      <div class="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
+      <div class="product-miniature__description-short" itemprop="description">{$product.description_short nofilter}</div>
     {/block}
 
     {block name='product_list_actions'}
-      <div class="product-list-actions">
+      <div class="product-miniature__actions">
         {if $product.add_to_cart_url}
             <a
-              class = "add-to-cart"
+              class = "product-miniature__actions--add-to-cart"
               href  = "{$product.add_to_cart_url}"
               rel   = "nofollow"
               data-id-product="{$product.id_product}"
@@ -44,15 +45,15 @@
 
     {block name='product_price_and_shipping'}
       {if $product.show_price}
-        <div class="product-price-and-shipping">
+        <div class="product-miniature__price-and-shipping">
           {if $product.has_discount}
             {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
-            <span class="regular-price">{$product.regular_price}</span>
+            <span class="product-miniature__price-and-shipping product-miniature__price-and-shipping--regular-price">{$product.regular_price}</span>
             {if $product.discount_type === 'percentage'}
-              <span class="discount-percentage discount-product">{$product.discount_percentage}</span>
+              <span class="product-miniature__price-and-shipping product-miniature__price-and-shipping--discount-percentage">{$product.discount_percentage}</span>
             {elseif $product.discount_type === 'amount'}
-              <span class="discount-amount discount-product">{$product.discount_amount_to_display}</span>
+              <span class="product-miniature__price-and-shipping product-miniature__price-and-shipping--discount-amount">{$product.discount_amount_to_display}</span>
             {/if}
           {/if}
 
@@ -68,9 +69,9 @@
     {/block}
 
     {block name='product_flags'}
-      <ul class="product-flags">
+      <ul class="product-miniature__flags">
         {foreach from=$product.flags item=flag}
-          <li class="{$flag.type}">{$flag.label}</li>
+          <li class="product-miniature__flags-item product-miniature__flags-item--{$flag.type}">{$flag.label}</li>
         {/foreach}
       </ul>
     {/block}
@@ -78,7 +79,7 @@
     {block name='product_availability'}
       {if $product.show_availability}
         {* availability may take the values "available" or "unavailable" *}
-        <span class='product-availability {$product.availability}'>{$product.availability_message}</span>
+        <span class="product-miniature__stock product-miniature__stock--{$product.availability}">{$product.availability_message}</span>
       {/if}
     {/block}
 
