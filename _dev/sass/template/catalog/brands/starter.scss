@@ -1,0 +1,10 @@
+.brands{
+    
+    &__list{
+        @extend .list-inline;
+    }
+    &__item{
+        @extend .list-inline-item;
+    }
+   
+}

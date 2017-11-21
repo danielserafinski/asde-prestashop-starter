@@ -1,4 +1,4 @@
-.category-miniature{
+.brand-miniature{
     @extend .card;
     &__img{
         @extend .card-img-top;
@@ -15,5 +15,10 @@
     &__button{
         @extend .btn;
         @extend .btn-primary;
+        &-badge{
+            @extend .badge;
+            @extend .badge-light;
+            @extend .badge-pill;
+        }
     }
 }

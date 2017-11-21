@@ -1,0 +1,49 @@
+.field{
+    &__label{
+        
+    }
+    &__select{
+        @extend .form-control;
+        &--country{
+            
+        }  
+    }
+    
+    &__radio{
+        @extend .form-group;
+        &-item{
+            @extend .form-check;
+            @extend .form-check-inline;
+        }
+        &-label{
+            @extend .form-check-label;
+        }
+        &-input{
+            @extend .form-check-input;
+        }
+    }
+    
+    &__checkbox{
+        @extend .form-check;
+        &-label{
+            @extend .form-check-label;
+        }        
+        &-input{
+            @extend .form-check-input;
+        }        
+    }
+
+    &__text{
+        @extend .form-group;
+        &--password{
+        
+        }
+        &-input{
+            @extend .form-control;
+        }
+    }
+    &__submit{
+        @extend .btn;
+        @extend .btn-primary;  
+    }    
+}

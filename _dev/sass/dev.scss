@@ -17,11 +17,19 @@
 @import 'template/_partials/footer/starter';
 @import 'template/_partials/breadcrumb/starter';
 @import 'template/_partials/pagination/starter';
+@import 'template/_partials/form-fields/starter';
 @import 'template/catalog/products/starter';
+@import 'template/catalog/brands/starter';
 @import 'template/catalog/listing/category/starter';
 @import 'template/catalog/_partials/miniatures/product/starter';
 @import 'template/catalog/_partials/miniatures/category/starter';
+@import 'template/catalog/_partials/miniatures/brand/starter';
 @import 'template/catalog/_partials/variant-links/starter';
+
+@import 'template/customer/registration/starter';
+@import 'template/customer/_partials/customer-form/starter';
+
+
 
 
 /**
