@@ -8,7 +8,8 @@ bootstrapVersion: 4
 # Webpack loaders, order matters
 styleLoaders:
   - style-loader
-  - css-loader?sourceMap&minimize
+#  - css-loader?sourceMap&minimize
+  - css-loader?sourceMap
   - resolve-url-loader?sourceMap
   - sass-loader?sourceMap
 
@@ -86,7 +87,7 @@ styles:
 scripts:
   alert: true
   button: true
-  carousel: false
+  carousel: true
   collapse: true
   dropdown: true
   modal: true

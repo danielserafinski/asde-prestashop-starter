@@ -1,0 +1,53 @@
+/***
+https://jsfiddle.net/ann7tctp/
+***/
+
+
+
+.ps_categorytree{
+	
+}
+.list-tree{
+    @extend .list-group;
+    border-top: 1px solid;
+    &[data-depth="0"], &[data-depth="1"]{
+          @extend .border-top-0;
+    }
+    
+    &__item{
+       @extend .list-group-item;
+        
+        &:not([data-depth="0"]){
+            
+            
+            @extend .px-0;
+            @extend .border-0;
+//            @extend .border-top-0;
+//            @extend .border-left-0;
+//            @extend .border-right-0;
+        }   
+        &--heading{
+            @extend .active;
+        }
+        
+        &-link{
+            @extend .d-inline-block;
+            @extend .px-1;
+             
+            &--heading{
+                @extend .text-white;
+            }           
+        }
+    }
+    &__icon{
+        @extend .d-inline-block;
+        @extend .pull-right;
+
+        &--open{
+            @extend .icon--vertical-open;
+        }
+        &--close{
+            @extend .icon--vertical-close;
+        }        
+    }
+}

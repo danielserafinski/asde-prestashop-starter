@@ -47,7 +47,7 @@
       {include file='_partials/notifications.tpl'}
     {/block}
 
-    <div id="wrapper">
+    <div id="wrapper" class="wrapper">
       {hook h="displayWrapperTop"}
 
       {block name='breadcrumb'}
@@ -55,7 +55,7 @@
       {/block}
 
       {block name='left_column'}
-        <div id="left-column">
+        <div id="left-column" class="wrapper__left-column">
           {if $page.page_name == 'product'}
             {hook h='displayLeftColumnProduct'}
           {else}
@@ -65,7 +65,7 @@
       {/block}
 
       {block name='right_column'}
-        <div id="right-column">
+        <div id="right-column" class="wrapper__right-column">
           {if $page.page_name == 'product'}
             {hook h='displayRightColumnProduct'}
           {else}
@@ -75,7 +75,7 @@
       {/block}
 
       {block name='content_wrapper'}
-        <div id="content-wrapper" class="left-column right-column">
+        <div id="content-wrapper" class="content-wrapper content-wrapper--both-columns">
           {hook h="displayContentWrapperTop"}
           {block name='content'}
             <p>Hello world! This is HTML5 Boilerplate.</p>

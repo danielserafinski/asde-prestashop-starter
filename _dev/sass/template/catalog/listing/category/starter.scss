@@ -1,0 +1,24 @@
+.category-cover{
+    @extend .d-block;
+    &__img{
+        @extend .img-fluid;
+    }    
+    &__info{
+
+    }
+    &__title{
+        
+    }
+    &__desc{
+        
+    }
+}
+.category-subcategories{
+    &__list{
+        @extend .d-flex;
+        @extend .list-inline;
+    }
+    &__item{
+        @extend .col-4;
+    }    
+}

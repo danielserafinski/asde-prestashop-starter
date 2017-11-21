@@ -1,4 +1,3 @@
-
 /**
 * Elements
 **/
@@ -14,17 +13,22 @@
 * Template
 **/
 
-@import 'template/_partials/breadcrumb/starter';
 @import 'template/_partials/header/starter';
 @import 'template/_partials/footer/starter';
+@import 'template/_partials/breadcrumb/starter';
+@import 'template/_partials/pagination/starter';
 @import 'template/catalog/products/starter';
+@import 'template/catalog/listing/category/starter';
 @import 'template/catalog/_partials/miniatures/product/starter';
+@import 'template/catalog/_partials/miniatures/category/starter';
 @import 'template/catalog/_partials/variant-links/starter';
+
 
 /**
 * MODULES
 **/
 @import 'modules/ps_banner/starter';
+@import 'modules/ps_categorytree/starter';
 @import 'modules/ps_contactinfo/starter';
 @import 'modules/ps_currencyselector/starter';
 @import 'modules/ps_customeraccountlinks/starter';
@@ -47,13 +51,35 @@
 //}
 
 
-#wrapper{
 
-}
 .page-content{
 	@extend .container;
 }
 .page-footer{
 	@extend .clearfix;
+}
+
+.wrapper{
+    @extend .container;
+    @extend .d-flex;
+    @extend .flex-wrap;
+    
+    &__right-column{
+        @extend .col-3;
+    }
+    &__left-column{
+        @extend .col-3;
+    }    
+}
+
+
+.content-wrapper{
+    &--left-column, &--right-column{
+        @extend .col-9;
+    }    
+    &--both-columns{
+        @extend .col-6;
+    }
+    
 }
 

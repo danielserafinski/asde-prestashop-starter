@@ -22,27 +22,47 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<nav class="pagination">
-  {block name='pagination_summary'}
-    {l s='Showing %from%-%to% of %total% item(s)' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items] d='Shop.Theme.Catalog'}
-  {/block}
+     
+     
+    
+     
+<nav class="pagination-page" aria-label="Page navigation">
+    <span class="pagination-page__summary">
+        {block name='pagination_summary'}
+            {l s='Showing %from%-%to% of %total% item(s)' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items] d='Shop.Theme.Catalog'}
+        {/block}
+    </span>
+
 
   {block name='pagination_page_list'}
-    <ul>
+    <ul class="pagination-page__list">
       {foreach from=$pagination.pages item="page"}
-        <li {if $page.current} class="current" {/if}>
+        <li  class="pagination-page__item{if $page.current} pagination-page__item--current{/if}" >
           {if $page.type === 'spacer'}
             <span class="spacer">&hellip;</span>
           {else}
+            {*
+                TODO: przetestować wyłaczenie next / prev
+            *}
             <a
-              rel="{if $page.type === 'previous'}prev{elseif $page.type === 'next'}next{else}nofollow{/if}"
+               {if $page.type === 'previous'}
+                    rel="prev"
+                    aria-label="Previous"
+               {elseif $page.type === 'next'}
+                    rel="next"
+                    aria-label="Next"
+               {else}
+                    rel="nofollow"
+               {/if}
               href="{$page.url}"
-              class="{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"
+              class="pagination-page__item-link {['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"
             >
               {if $page.type === 'previous'}
-                {l s='Previous' d='Shop.Theme.Actions'}
+                <span aria-hidden="true" class="pagination-page__icon--prev"></span>
+                <span class="sr-only">{l s='Previous' d='Shop.Theme.Actions'}</span>
               {elseif $page.type === 'next'}
-                {l s='Next' d='Shop.Theme.Actions'}
+                <span aria-hidden="true" class="pagination-page__icon--next"></span>
+                <span class="sr-only">{l s='Next' d='Shop.Theme.Actions'}</span>
               {else}
                 {$page.page}
               {/if}
@@ -52,5 +72,4 @@
       {/foreach}
     </ul>
   {/block}
-
 </nav>

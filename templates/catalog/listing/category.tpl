@@ -25,20 +25,21 @@
 {extends file='catalog/listing/product-list.tpl'}
 
 {block name='product_list_header'}
+     <aside class="category-cover">
 
-  <h1>{$category.name}</h1>
-  <div class="category-cover">
-    <img src="{$category.image.large.url}" alt="{$category.image.legend}">
-  </div>
-  <div id="category-description">{$category.description nofilter}</div>
-
+         <div class="category-cover__info">
+            <h2 class="category-cover__title">{$category.name}</h2>
+            <div class="category-cover__desc">{$category.description nofilter}</div>             
+         </div>
+         <img class="category-cover__img" src="{$category.image.large.url}" alt="{$category.image.legend}">         
+     </aside>
+  
   {block name='category_subcategories'}
-    <aside>
       {if $subcategories|count}
-        <nav class="subcategories">
-          <ul>
+        <nav class="category-subcategories">
+          <ul class="category-subcategories__list">
             {foreach from=$subcategories item="subcategory"}
-              <li>
+              <li class="category-subcategories__item">
                 {block name='category_miniature'}
                   {include file='catalog/_partials/miniatures/category.tpl' category=$subcategory}
                 {/block}
@@ -47,7 +48,7 @@
           </ul>
         </nav>
       {/if}
-    </aside>
   {/block}
 
 {/block}
+     

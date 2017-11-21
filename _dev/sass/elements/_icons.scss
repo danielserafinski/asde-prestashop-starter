@@ -38,6 +38,30 @@
 		@extend .fa;
 		@extend .fa-envelope;
 	}
+	&--close{
+		@extend .fa;
+		@extend .fa-folder;
+	} 
+	&--open{
+		@extend .fa;
+		@extend .fa-folder-open;
+	}
+	&--vertical-close{
+		@extend .fa;
+		@extend .fa-chevron-down;
+	} 
+	&--vertical-open{
+		@extend .fa;
+		@extend .fa-chevron-up;
+	}
+	&--next{
+		@extend .fa;
+		@extend .fa-chevron-right;
+	}  
+    &--prev{
+		@extend .fa;
+		@extend .fa-chevron-left;
+	}  
     &__font{
         &--twiter{
             @include icon-fonts("\f081");

@@ -1,4 +1,5 @@
 .breadcrumb{
+    @extend .col-12;
 	&__list{
 		@extend .breadcrumb;
 	}

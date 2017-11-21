@@ -1,0 +1,36 @@
+.pagination-page{
+    @extend .col-12;
+    @extend .d-flex;
+    @extend .flex-wrap;
+    &__summary{
+        @extend .d-inline-block;
+        @extend .ml-auto;
+    }
+    &__list{
+        
+        @extend .col-12;
+        @extend .pagination;
+        @extend .justify-content-center;
+    }
+    
+    &__item{
+        @extend .page-item;
+        &-link{
+            @extend .page-link;
+        }
+        &--current{
+            
+        }
+        &--disabled{
+             @extend .disabled;
+        }        
+    }    
+    &__icon{
+        &--next{
+            @extend .icon--next;
+        }
+        &--prev{
+            @extend .icon--prev;
+        }       
+    }
+}
