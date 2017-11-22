@@ -1,0 +1,23 @@
+.address-block{
+    @extend .card;
+    @extend .col-4;
+    &__img{
+        @extend .card-img-top;
+    }
+    &__body{
+         @extend .card-body;
+    }
+    &__title{
+         @extend .card-title;
+    }
+    &__desc{
+         @extend .card-text;
+    }
+    &__link{
+        @extend .card-link;
+    }    
+    &__button{
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}

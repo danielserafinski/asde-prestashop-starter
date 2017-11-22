@@ -1,0 +1,38 @@
+.my-account-links{
+
+    @extend .list-inline;
+    @extend .mt-3;
+    @extend .d-flex;
+    @extend .justify-content-end;
+
+    &__item{
+        @extend .list-inline-item;
+        &--my-account{
+            
+        }
+        &--index{
+            
+        }
+        /* customer/password-email.tpl */
+        &--back-to-login{
+            
+        }        
+        
+        
+        &-link{
+            @extend .btn;
+            @extend .btn-dark;
+            &--my-account{
+                
+            }
+            &--index{
+
+            }
+            /* customer/password-email.tpl */
+            &--back-to-login{
+
+            }                 
+        }
+    }
+
+}

@@ -20,6 +20,8 @@
         } 
     }
     &__list{
+        @extend .list-unstyled;
+        @extend .m-0;
         &-item{
             
         }

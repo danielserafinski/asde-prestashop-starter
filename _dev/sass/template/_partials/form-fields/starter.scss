@@ -54,5 +54,8 @@ TODO:
     &__submit{
         @extend .btn;
         @extend .btn-primary;  
-    }    
+    }
+    &__textarea{
+        @extend .form-control;
+    }
 }
