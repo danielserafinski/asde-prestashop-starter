@@ -1,0 +1,27 @@
+.notifications{
+    @extend .container;
+    @extend .mt-3;
+    &__item{
+        @extend .row;
+        @extend .alert;
+        
+        
+        &--danger{
+            @extend .alert-danger;
+        }
+        &--warning{
+            @extend .alert-warning;
+        }    
+        &--success{
+            @extend .alert-success;
+        } 
+        &--info{
+            @extend .alert-info;
+        } 
+    }
+    &__list{
+        &-item{
+            
+        }
+    }
+}

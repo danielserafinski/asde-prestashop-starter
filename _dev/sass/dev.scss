@@ -18,6 +18,7 @@
 @import 'template/_partials/breadcrumb/starter';
 @import 'template/_partials/pagination/starter';
 @import 'template/_partials/form-fields/starter';
+@import 'template/_partials/notifications/starter';
 @import 'template/catalog/products/starter';
 @import 'template/catalog/brands/starter';
 @import 'template/catalog/listing/category/starter';
@@ -27,8 +28,8 @@
 @import 'template/catalog/_partials/variant-links/starter';
 
 @import 'template/customer/registration/starter';
-@import 'template/customer/_partials/customer-form/starter';
-
+@import 'template/customer/my-account/starter';
+//@import 'template/customer/_partials/customer-form/starter'; //nic tu nie ma
 
 
 
@@ -59,18 +60,49 @@
 //}
 
 
+.page{
+    @extend .col-12;
+    @extend .my-3;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    @extend .flex-wrap;
+    &__header{
+        @extend .col-12;
 
-.page-content{
-	@extend .container;
+    }
+    &__content{
+
+        &-header{
+            &-title{
+                
+            }
+        }        
+        &--my-account{
+            @extend .col-12;
+        }
+        &--authentication{
+            @extend .col-8;
+        }
+        &--address{
+            @extend .col-8;
+        }           
+        &--addresses{
+            @extend .col-8;
+        }        
+        
+    }
+    &__footer{
+        @extend .col-12;
+    }     
 }
-.page-footer{
-	@extend .clearfix;
-}
+
 
 .wrapper{
     @extend .container;
-    @extend .d-flex;
-    @extend .flex-wrap;
+    &__row{
+        @extend .row;
+    }
     
     &__right-column{
         @extend .col-3;
@@ -82,9 +114,15 @@
 
 
 .content-wrapper{
-    &--left-column, &--right-column{
+    &--content-only{
+        @extend .col-12;
+    }
+    &--left-column{
         @extend .col-9;
-    }    
+    } 
+    &--right-column{
+        @extend .col-9;
+    }     
     &--both-columns{
         @extend .col-6;
     }

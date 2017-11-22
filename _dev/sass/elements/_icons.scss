@@ -6,6 +6,20 @@
     content: $content;
 }
 .icon{
+    &--size{
+        &-2x{
+            @extend .fa-2x;
+        }
+        &-3x{
+            @extend .fa-3x;
+        } 
+        &-4x{
+            @extend .fa-4x;
+        }
+        &-5x{
+            @extend .fa-5x;
+        }        
+    }
 	
 	&--cart{
 		@extend .fa;
@@ -62,6 +76,35 @@
 		@extend .fa;
 		@extend .fa-chevron-left;
 	}  
+    &--addresses{
+		@extend .fa;
+		@extend .fa-address-card;
+	} 
+    &--addresses-add{
+		@extend .fa;
+		@extend .fa-calendar-plus-o;
+	}  
+    &--identity{
+		@extend .fa;
+		@extend .fa-newspaper-o;
+	}  
+    &--history{
+		@extend .fa;
+		@extend .fa-list-alt;
+	}  
+    &--order-slips{
+		@extend .fa;
+		@extend .fa-money;
+	}  
+    &--discounts{
+		@extend .fa;
+		@extend .fa-usd;
+	}  
+    &--returns{
+		@extend .fa;
+		@extend .fa-reply-all;
+	}  
+    
     &__font{
         &--twiter{
             @include icon-fonts("\f081");

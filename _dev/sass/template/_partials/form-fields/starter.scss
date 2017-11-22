@@ -1,9 +1,18 @@
+/***
+TODO:
+- zrobic kalendarz
+***/
+
 .field{
     &__label{
         
     }
     &__select{
-        @extend .form-control;
+        @extend .form-group;
+        
+        &-input{
+            @extend .form-control;
+        }
         &--country{
             
         }  

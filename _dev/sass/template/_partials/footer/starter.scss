@@ -5,6 +5,7 @@
     @extend .flex-wrap;
     @extend .bg-primary;
     @extend .text-white;
+//    display: none !important;
 
     &-links{
         @extend .col-12;

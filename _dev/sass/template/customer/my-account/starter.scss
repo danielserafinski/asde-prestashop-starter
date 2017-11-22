@@ -1,0 +1,89 @@
+.my-account-links{
+    @extend .list-inline;
+    @extend .d-flex;
+    @extend .flex-wrap;
+    @extend .justify-content-around;
+    &__icon{
+        @extend .d-block;
+        @extend .icon--size-4x;
+        &--addresses{
+            @extend .icon--addresses;
+        }
+        &--addresses-add{
+            @extend .icon--addresses-add;
+        }
+        &--identity{
+            @extend .icon--identity;
+        }
+        &--history{
+            @extend .icon--history;
+        }
+        &--order-slips{
+            @extend .icon--order-slips;
+        }
+        &--discounts{
+            @extend .icon--discounts;
+        }
+        &--returns{
+            @extend .icon--returns;
+        }        
+    }
+    &__item{
+        @extend .list-inline-item;
+        @extend .col-3;
+        @extend .mx-3;
+        @extend .mb-3;
+        @extend .px-0;
+        @extend .btn;
+        @extend .btn-light;
+        
+        &--addresses{
+            
+        }
+        &--addresses-add{
+            
+        }
+        &--identity{
+            
+        }
+        &--history{
+            
+        }
+        &--order-slips{
+            
+        }
+        &--discounts{
+            
+        }
+        &--returns{
+            
+        }
+        &-link{
+            &:hover{
+                text-decoration: none;
+            }
+            &--addresses{
+
+            }
+            &--addresses-add{
+
+            }
+            &--identity{
+
+            }
+            &--history{
+
+            }
+            &--order-slips{
+
+            }
+            &--discounts{
+
+            }
+            &--returns{
+
+            }            
+        }
+    }    
+    
+}
