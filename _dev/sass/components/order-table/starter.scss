@@ -5,6 +5,9 @@
     &__head{
         @extend .thead-dark;
     }
+    &__foot{
+        @extend .thead-dark;
+    }    
     &__status-label{
         @extend .badge;
         &--bright{
@@ -26,5 +29,19 @@
         &--reorder{
             
         }        
+    }
+    &__line{
+        &--products{
+             @extend .table-active;
+        }
+        &--shipping{
+            
+        }
+        &--tax{
+            
+        }           
+        &--total{
+            @extend .table-info;
+        }                   
     }
 }

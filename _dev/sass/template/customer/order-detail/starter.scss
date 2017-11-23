@@ -1,3 +1,17 @@
-.order-detail{
-    
+.order-detail{    
+    &__section{
+
+        &--infos{
+
+        }
+        &--history{
+
+        }  
+        &--addresses{
+            @extend .d-flex;
+            @extend .justify-content-around;
+            @extend .my-3;
+        }         
+    }
+     
 }

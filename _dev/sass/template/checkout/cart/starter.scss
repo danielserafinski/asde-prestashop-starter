@@ -1,0 +1,25 @@
+.cart{
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .flex-wrap;
+    @extend .mb-3;
+    
+    &__title{
+        @extend .col-12;    
+    }
+    &__detailed{
+        @extend .col-9;
+    }
+    &__summary{
+        @extend .col-3;
+    }
+    
+    &__button{
+        @extend .btn;
+        @extend .btn-sm;
+        
+        &--checkout{
+            @extend .btn-primary;
+        }
+    }
+}

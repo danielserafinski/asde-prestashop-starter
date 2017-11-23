@@ -1,0 +1,73 @@
+.cart-products-table{
+    @extend .table;
+    @extend .table-bordered;
+    @extend .table-striped;
+    &__head{
+        @extend .thead-dark;
+    }
+    &__foot{
+        @extend .thead-dark;
+    }
+    &__line{
+        
+    }
+    &__cell{
+        @extend .align-middle;
+        &--image{
+            @extend .text-center;
+        }
+        &--desc{
+            
+        }
+        &--availability{
+            @extend .text-center;
+        }
+        &--price{
+            @extend .text-right;
+        } 
+        &--actions{
+            @extend .text-center;
+        }
+        &--quantity{
+            @extend .text-center;
+        }
+    }
+    &__desc{
+        &--name{
+            @extend .d-block;
+        }
+        &--attributes{
+            
+        }
+        &-attribute{
+            &-label{
+                @extend .text-muted;
+            }
+            &-value{
+                
+            }            
+        }
+    }
+    &__gift{
+        
+    }
+    &__quantity{
+        @extend .input-group;
+        &-group{
+            @extend .input-group-btn;
+        }
+        &-button{
+            @extend .btn;
+            @extend .btn-secondary;
+            &--down{
+                @extend .btn-warning;
+            }            
+            &--up{
+                @extend .btn-success;
+            }
+        }
+        &-value{
+            @extend .form-control;
+        }
+    }
+}

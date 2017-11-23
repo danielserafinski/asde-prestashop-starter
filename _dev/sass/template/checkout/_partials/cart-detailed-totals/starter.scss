@@ -1,0 +1,28 @@
+.cart-detailed-totals{
+    @extend .table;
+    @extend .table-bordered;
+    @extend .table-striped;
+    &__line{
+        
+        &--products{
+            @extend .table-active;
+        }
+        &--total{
+            @extend .table-info;
+        }
+        &--discount{
+            @extend .table-danger;
+        }
+        &--shipping{
+            
+        }
+    }
+    &__cell{
+        &--label{
+            @extend .text-muted;
+        }
+        &--value{
+            @extend .text-right;
+        }
+    }
+}

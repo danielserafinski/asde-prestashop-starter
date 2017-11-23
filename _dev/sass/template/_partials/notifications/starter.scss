@@ -5,7 +5,9 @@
         @extend .row;
         @extend .alert;
         
-        
+        &--error{
+            @extend .alert-danger;
+        }        
         &--danger{
             @extend .alert-danger;
         }

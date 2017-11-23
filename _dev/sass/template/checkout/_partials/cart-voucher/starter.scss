@@ -1,0 +1,67 @@
+.cart-voucher{
+    
+    &__list{
+        
+        &-used{
+            @extend .list-group;
+           
+            &-item{
+                @extend .list-group-item;
+                @extend .list-group-item-action;
+                @extend .d-flex;
+                @extend .justify-content-between;
+                @extend .align-items-center;
+            }
+        }
+        
+        &-available{
+            @extend .list-group ;
+   
+            &-item{
+                @extend .list-group-item;
+                @extend .list-group-item-action;                
+                &--title{
+                    @extend .active;
+                    @extend .disabled;
+                }
+            }
+            &-desc{
+                &--code{
+                    @extend .d-block;
+                    @extend .font-weight-bold;
+                }
+                &--label{
+                    @extend .text-muted;
+                    font-size: 0.7rem;
+                }              
+            }
+        }
+    }
+    
+    
+    &__form{
+        @extend .input-group;
+         @extend .my-3;
+        &-group{
+            @extend .input-group-btn;
+        }
+        &-input{
+            @extend .form-control;
+        }
+        &-button{
+            @extend .btn;
+            @extend .btn-secondary;
+        }
+    }
+    
+    &__notification{
+        @extend .col-12;
+       
+        &-item{
+            
+            &--error{
+                @extend .text-danger;
+            }
+        }
+    }
+}

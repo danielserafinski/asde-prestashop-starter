@@ -10,11 +10,12 @@
 
 
 /**
-* 
+* Components
 **/
 
 @import 'components/address-block/starter';
 @import 'components/order-table/starter';
+@import 'components/cart-products-table/starter';
 
 
 /**
@@ -35,15 +36,18 @@
 @import 'template/catalog/_partials/miniatures/brand/starter';
 @import 'template/catalog/_partials/variant-links/starter';
 
-@import 'template/customer/history/starter';
+//@import 'template/customer/history/starter';
 @import 'template/customer/registration/starter';
 @import 'template/customer/my-account/starter';
 @import 'template/customer/order-detail/starter';
-@import 'template/customer/_partials/block-address/starter';
+//@import 'template/customer/_partials/block-address/starter';
 @import 'template/customer/_partials/my-account-links/starter';
 //@import 'template/customer/_partials/customer-form/starter'; //nic tu nie ma
 
-
+@import 'template/checkout/cart/starter';
+@import 'template/checkout/checkout/starter';
+@import 'template/checkout/_partials/cart-voucher/starter';
+@import 'template/checkout/_partials/cart-detailed-totals/starter';
 
 /**
 * MODULES
