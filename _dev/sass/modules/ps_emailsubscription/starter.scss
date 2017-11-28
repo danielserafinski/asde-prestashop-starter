@@ -22,5 +22,12 @@
     }
     &__conditions{
     
-    } 
+    }
+
+    &__icon{
+        @extend .icon--newsletter;
+        &-desc{
+            @extend .sr-only;
+        }        
+    }
 }

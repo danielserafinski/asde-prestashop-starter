@@ -1,9 +1,10 @@
-._product-button-info{
+@mixin product-button-info() {
 	@extend .px-2;
 	@extend .py-1;
 	@extend .mt-2;
 	font-size: 0.7rem;	
 }
+
 .product-miniature{
 	@extend .col-12;
 	@extend .col-sm-5;
@@ -59,18 +60,11 @@
 		position: absolute;
 		top: 0;
 		&-item{
-			@extend ._product-button-info;
+			@include product-button-info(); 
 			&:first-of-type{
 				
 			}
-			&--new{
-				@extend .text-white;
-				background-color: $asde-color-new;
-			}
-			&--discount{
-				@extend .text-white;
-				background-color: $asde-color-discount;
-			}			
+			@include product-flags-colors();         
 		}
 	}
 	&__stock{
@@ -78,14 +72,7 @@
 		top: 0;
 		right: 0;
         
-		@extend ._product-button-info;
-		&--available{
-			@extend .text-white;
-			background-color: $asde-color-instock--available;
-		}
-		&--unavailable{
-			@extend .text-white;
-			background-color: $asde-color-instock--unavailable;			
-		}		
+		@include product-button-info(); 
+	    @include product-stock-colors();
 	}
 }

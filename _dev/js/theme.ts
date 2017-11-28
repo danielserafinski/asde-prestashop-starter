@@ -8,9 +8,11 @@ import * as bootstrap from 'bootstrap'
 /**
 * Import przykładowego modułu
 */
-import './modules/example/example';
+//import './modules/example/example';
 
 /**
 * Test JS i jQuery
 */
 console.log(jQuery.fn.jquery);
+import './modules/ps_mainmenu/starter';
+

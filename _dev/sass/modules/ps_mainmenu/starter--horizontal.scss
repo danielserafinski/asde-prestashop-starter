@@ -1,0 +1,112 @@
+/***
+Testowa, nieskonczone
+***/
+
+
+@keyframes ps_mainmenu__pointer {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+    
+}
+@keyframes ps_mainmenu__submenu {
+    from {
+        margin-top: -2rem;
+        opacity: 0.1;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+.ps_mainmenu{
+    background: yellow;
+	z-index: 990;
+    background: yellow;
+	@extend .col-12;
+	@extend .m-0;
+	@extend .mt-2;
+	@extend .p-0;
+	&__list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		@extend .col-12;
+		@extend .btn-group;
+		@extend .bg-primary;
+		
+        
+		&[data-depth="0"]{
+
+		}
+		&:not([data-depth="0"]){
+			display: none;	
+		}
+		&[data-depth="0"]{
+
+		}
+		&[data-depth="1"]{
+
+		}
+		&[data-depth="2"]{
+
+		}
+		&[data-depth="3"]{
+
+		}
+		
+	}
+
+	&__item
+	{
+		@extend .d-inline-block;
+		&-link{
+			@extend .d-block;
+			@extend .p-3;
+			@extend .text-white;
+            text-decoration: none;
+
+			&:not([data-children="0"]):before{
+				display: inline-block;
+				@extend .icon__font--pointer;
+				transform: rotate(90deg);
+			}
+			&:hover{
+                text-decoration: none;
+                @extend .bg-info;
+				&:not([data-children="0"]):before{
+                    transform: rotate(180deg);
+                    animation-name: ps_mainmenu__pointer;
+                    animation-duration: 0.5s;
+				}				
+			}
+		}
+		&:hover 
+		{
+            
+            & > ul{
+				@extend .d-block;
+				position: absolute;
+				left: 0;
+                animation-name: ps_mainmenu__submenu;
+                animation-duration: 0.7s;                
+			}
+		}
+		&[data-depth="0"]{
+
+		}
+		&[data-depth="1"]{
+
+		}
+		&[data-depth="2"]{
+
+		}
+		&[data-depth="3"]{
+
+		}		
+	}
+}

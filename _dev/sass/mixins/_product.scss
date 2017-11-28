@@ -1,0 +1,26 @@
+@mixin product-flags-colors() {
+    &--new{
+        @extend .text-white;
+        background-color: $asde-color-new;
+    }
+    &--discount{
+        @extend .text-white;
+        background-color: $asde-color-discount;
+    }
+    &--pack{
+        @extend .text-white;
+        @extend .bg-dark;
+    }	
+}
+
+
+@mixin product-stock-colors() {
+    &--available{
+        @extend .text-white;
+        background-color: $asde-color-instock--available;
+    }
+    &--unavailable{
+        @extend .text-white;
+        background-color: $asde-color-instock--unavailable;			
+    }	
+}

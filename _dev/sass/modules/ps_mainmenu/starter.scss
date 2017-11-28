@@ -1,107 +1,148 @@
-@keyframes mainmenu__pointer {
-    from {
-        transform: rotate(90deg);
+/*
+http://jsfiddle.net/6W7XD/1/
+https://codepen.io/MaGiO/pen/YXXzeJ
+https://jsfiddle.net/alvaromenendez/9m60mx6r/7/
+*/
+
+@keyframes menu-show {
+    from { left: -160px;}
+    to {left: 80px;}
+}
+
+@keyframes menu-hide {
+    from {left: 80px;}
+    to {left: -160px;}
+}
+
+
+.ps_mainmenu{
+    @extend .bg-warning;
+    @extend .d-flex;
+    position: fixed;
+    width: 320px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 3000;
+    
+    &__actions{
+        @extend .list-unstyled;
+        @extend .d-flex;
+        @extend .align-items-start;
+        @extend .flex-column;
+        width: 80px;
+        background: red;
+        height: 100%;
+        z-index: 3030;
+        
     }
-    to {
-        transform: rotate(180deg);
+    &__action{
+        @extend .btn;
+        @extend .btn-outline-light;
+        @extend .my-1;
+        @extend .mx-auto;
+        
+        &-desc{
+            @extend .sr-only;
+        }
+        &-icon{
+            @extend .icon--size-2x;
+            &--products{
+                @extend .icon--close;
+                background-color: #f47070;
+            } 
+            &--account{
+                @extend .icon--account;
+                background-color: #af20da;
+            }  
+            &--help{
+                @extend .icon--history;
+                background-color: #20daa8;
+            }              
+        }
     }
     
-}
-@keyframes mainmenu__submenu {
-    from {
-        margin-top: -2rem;
-        opacity: 0.1;
+    
+    &__account{
+        @extend .list-unstyled;
+        position: fixed;
+        left: -240px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        z-index: 3020;
+        background-color: #af20da;
     }
-    to {
-        margin-top: 0;
-        opacity: 1;
+    &__help{
+        @extend .list-unstyled;
+        position: fixed;
+        left: -240px;
+        top: 0;
+        height: 100%;
+        width: 240px;
+        z-index: 3020;
+        background-color: #20daa8;
     }
-}
-
-.mainmenu{
-	z-index: 990;
-
-	@extend .col-12;
-	@extend .m-0;
-	@extend .mt-2;
-	@extend .p-0;
-	&-list{
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		position: relative;
-		@extend .col-12;
-		@extend .btn-group;
-		@extend .bg-primary;
-		
-        
-		&[data-depth="0"]{
-
-		}
-		&:not([data-depth="0"]){
-			display: none;	
-		}
-		&[data-depth="0"]{
-
+    
+    &__list{
+        @extend .list-unstyled;
+        @extend .m-0;
+        &:not([data-depth="0"]){
+           position: fixed;
+           left: -240px;
+           top: 0;
+           height: 100%;
+           width: 240px;
+        }
+    	&[data-depth="0"]{
+            width: 240px;
+            background-color: #f47070;
 		}
 		&[data-depth="1"]{
-
+            z-index: 3001;
+            background-color: brown;
 		}
 		&[data-depth="2"]{
-
+            z-index: 3002;
+            background-color: greenyellow;
 		}
-		&[data-depth="3"]{
+		&[data-depth="3"]{    
+            z-index: 3003;
+            background-color: goldenrod;
+		}    
+    }
 
-		}
-		
-	}
-
-	&-item
+	&__item
 	{
-		@extend .d-inline-block;
-		&_link{
-			@extend .d-block;
-			@extend .p-3;
-			@extend .text-white;
-            text-decoration: none;
-
-			&:not([data-children="0"]):before{
-				display: inline-block;
-				@extend .icon__font--pointer;
-				transform: rotate(90deg);
-			}
-			&:hover{
-                text-decoration: none;
-                @extend .bg-info;
-				&:not([data-children="0"]):before{
-                    transform: rotate(180deg);
-                    animation-name: mainmenu__pointer;
-                    animation-duration: 0.5s;
-				}				
-			}
-		}
-		&:hover 
-		{
-            
-            & > .mainmenu-list{
-				@extend .d-block;
-				position: absolute;
-				left: 0;
-                animation-name: mainmenu__submenu;
-                animation-duration: 0.7s;                
-			}
-		}
-		&[data-depth="0"]{
+        @extend .p-2;
+        @extend .d-flex;
+        @extend .justify-content-between;
+        @extend .col-12;
+		&-icon{
+            @extend .icon--next;
+            @extend .ml-auto;
+		}        
+		&-link{
 
 		}
-		&[data-depth="1"]{
-
-		}
-		&[data-depth="2"]{
-
-		}
-		&[data-depth="3"]{
-
-		}		
 	}
+}
+
+//Uwaga na style :) zeby sie nienadpisywały :) Musi być na dole i uwaga z dziedziczeniem :)
+
+.js-ps_mainmenu{
+     &__list{
+        &-move{
+            &--show{
+                animation-name: menu-show;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+            &--hide{
+                animation-name: menu-hide;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }            
+        }
+    }
 }

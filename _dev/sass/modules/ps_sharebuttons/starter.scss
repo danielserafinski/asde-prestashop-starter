@@ -1,0 +1,9 @@
+.ps_sharebuttons{
+    @extend .col-12;
+    @include social-icons();
+    &__item{
+        &-link{
+            @extend .text-dark;
+        }
+    }
+}

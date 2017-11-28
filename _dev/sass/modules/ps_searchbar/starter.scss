@@ -1,8 +1,10 @@
 .ps_searchbar{
 	@extend .d-inline-block;
     
-    &__form{
-
-          
+    &__icon{
+        @extend .icon--search;
+        &-desc{
+            @extend .sr-only;
+        }        
     }
 }

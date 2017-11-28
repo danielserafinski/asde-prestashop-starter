@@ -1,0 +1,81 @@
+/****
+
+Adapter do formularzy Bootstrap
+stylizacja inputów
+https://codepen.io/BrianSassaman/pen/iLrpC
+****/
+.form{
+    &__fields{
+        
+    }
+    &__footer{
+        
+    }
+}
+.form-field{
+    &__label{
+        &-check{
+            @extend .form-check-label;
+            &--inline{
+                @extend .form-check-inline;
+            }
+        }
+        &--required{
+            
+        }
+    }
+    &__row{
+        @extend .form-row;
+    }
+    &__group{
+        @extend .form-group;
+        &-check{
+            @extend .form-check;
+        }
+        &-input{
+            @extend .input-group;
+            &-btn{
+                @extend .input-group-btn;
+            }
+        }
+    }
+    &__input{
+        &--text, &--select, &--password, &--textarea, &--email, &--number{
+            @extend .form-control;
+        }
+        &--check{
+            @extend .form-check-input;
+        }
+    }
+    &__button{
+        @extend .btn;
+        &--submit{
+            @extend .btn-primary;
+        }
+        &--group{
+            @extend .btn-secondary;
+        }
+        &--add-to-cart{
+            @extend .btn-danger;
+        }        
+    }
+    &__error{
+        @extend .invalid-feedback;
+    }
+    &__description{
+        @extend .form-text;
+        @extend .text-muted;
+    }
+}
+/*
+          <div class="form-field__group">
+              <label class="form-field__label">{l s='Set your password:' d='Shop.Forms.Labels'}</label>
+              <input type="password" data-validate="isPasswd" name="password" value="" class="form-field__input form-field__input--password">
+          </div>
+*/
+/*
+form-field__label-check form-field__label-check--inline
+form-field__button form-field__button--submit
+form-field__input form-field__input--text
+form-field__input form-field__input--select
+*/

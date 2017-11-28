@@ -1,0 +1,18 @@
+.mdl_blockreassurance{
+    &__list{
+        @extend .list-unstyled;
+    }
+    &__item{
+        
+        @extend .text-justify;
+        @extend .text-muted;
+        @extend .mb-3;
+        &:last-of-type{
+            @extend .mb-0;
+        }
+        font-size: 0.85rem;
+        &-img{
+            @extend .float-left;
+        }
+    }
+}

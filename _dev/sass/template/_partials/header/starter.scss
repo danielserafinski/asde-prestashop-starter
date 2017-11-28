@@ -3,11 +3,10 @@
 	@extend .d-flex;
 	@extend .flex-wrap;
 	@extend .justify-content-start;
-	@extend .p-0;
 
 	
 	&__banner{
-		@extend .col-12;
+		@extend .row;
 	}
 	
 	&__nav{

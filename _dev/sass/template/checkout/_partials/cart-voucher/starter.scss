@@ -40,17 +40,17 @@
     
     
     &__form{
-        @extend .input-group;
-         @extend .my-3;
+        @extend .form-field__group-input;
+        @extend .my-3;
         &-group{
-            @extend .input-group-btn;
+            @extend .form-field__group-input-btn;
         }
         &-input{
-            @extend .form-control;
+            @extend .form-field__input--text;
         }
         &-button{
-            @extend .btn;
-            @extend .btn-secondary;
+            @extend .form-field__button;
+            @extend .form-field__button--group;
         }
     }
     

@@ -1,0 +1,97 @@
+.product{
+    @extend .flex-column;
+    @extend .flex-wrap;
+    @extend .align-items-end;
+    &__flags{
+        
+        @extend .col-12;
+        @extend .list-inline;
+ 		&-item{
+            @extend .list-inline-item;
+            @extend .px-2;
+	        @extend .py-1;
+	        @extend .mr-2;
+			&:last-of-type{
+				@extend .mr-0;
+			}
+			@include product-flags-colors();         
+		}       
+    }
+    &__images{
+        @extend .col-6;
+        @extend .mr-auto;
+    }
+    &__information{
+        @extend .col-6;
+    }
+    &__actions{
+        @extend .col-6;
+    } 
+    &__features{
+        @extend .col-6;
+    }   
+    &__pack{
+        @extend .col-6;
+    }  
+    &__accessories{
+        @extend .col-6;
+    }    
+    &__attachments{
+        @extend .col-6;
+    }        
+}
+.product-images{
+    &__cover{
+        &-image{
+            @extend .img-fluid;
+        }         
+    }
+    &__thumbnails{
+        @extend .list-inline;
+        &-item{
+            @extend .list-inline-item;
+            @extend .col-3;
+        }
+        &-thumbnail{
+            @extend .img-thumbnail;
+        }        
+    }    
+}
+.product-information{
+    &__label{
+        @extend .text-muted;
+    }
+    &__value{
+        
+    }
+    &__reference{
+        
+    }
+    &__condition{
+        
+    }
+    &__description-short{
+        
+    }
+    &__description{
+        
+    }
+    &__quantities{
+        
+    }
+    &__stock{
+        @extend .d-inline-block;
+        @include product-stock-colors();
+        @extend .px-2;
+	    @extend .py-1;
+	    @extend .mr-2;        
+    }
+    &__availability-date{
+        
+    }
+    &__out-of-stock{
+        
+    }      
+    
+   
+}

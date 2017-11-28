@@ -6,67 +6,77 @@
 @import 'elements/_fonts';
 @import 'elements/_colors';
 @import 'elements/_icons';
-@import 'elements/forms';
+//@import 'elements/_forms';
 
+
+/**
+* Mixins
+**/
+
+//@import 'mixins/_product';
+//@import 'mixins/_social';
 
 /**
 * Components
 **/
 
-@import 'components/address-block/starter';
-@import 'components/order-table/starter';
-@import 'components/cart-products-table/starter';
+//@import 'components/address-block/starter';
+//@import 'components/order-table/starter';
+//@import 'components/cart-products-table/starter';
 
 
 /**
 * Template
 **/
 
-@import 'template/_partials/header/starter';
-@import 'template/_partials/footer/starter';
-@import 'template/_partials/breadcrumb/starter';
-@import 'template/_partials/pagination/starter';
-@import 'template/_partials/form-fields/starter';
-@import 'template/_partials/notifications/starter';
-@import 'template/catalog/products/starter';
-@import 'template/catalog/brands/starter';
-@import 'template/catalog/listing/category/starter';
-@import 'template/catalog/_partials/miniatures/product/starter';
-@import 'template/catalog/_partials/miniatures/category/starter';
-@import 'template/catalog/_partials/miniatures/brand/starter';
-@import 'template/catalog/_partials/variant-links/starter';
+//@import 'template/_partials/header/starter';
+//@import 'template/_partials/footer/starter';
+//@import 'template/_partials/breadcrumb/starter';
+//@import 'template/_partials/pagination/starter';
+//@import 'template/_partials/form-fields/starter'; //wywalone do elements/_forms
+//@import 'template/_partials/notifications/starter';
+//@import 'template/catalog/products/starter';
+//@import 'template/catalog/product/starter';
+//@import 'template/catalog/brands/starter';
+//@import 'template/catalog/listing/category/starter';
+//@import 'template/catalog/_partials/miniatures/product/starter';
+//@import 'template/catalog/_partials/miniatures/category/starter';
+//@import 'template/catalog/_partials/miniatures/brand/starter';
+//@import 'template/catalog/_partials/variant-links/starter';
 
-//@import 'template/customer/history/starter';
-@import 'template/customer/registration/starter';
-@import 'template/customer/my-account/starter';
-@import 'template/customer/order-detail/starter';
-//@import 'template/customer/_partials/block-address/starter';
-@import 'template/customer/_partials/my-account-links/starter';
+//@import 'template/customer/history/starter'; //nie ma
+//@import 'template/customer/registration/starter';
+//@import 'template/customer/my-account/starter';
+//@import 'template/customer/order-detail/starter';
+//@import 'template/customer/_partials/block-address/starter';  //nie ma
+//@import 'template/customer/_partials/my-account-links/starter';
 //@import 'template/customer/_partials/customer-form/starter'; //nic tu nie ma
 
-@import 'template/checkout/cart/starter';
-@import 'template/checkout/checkout/starter';
-@import 'template/checkout/_partials/cart-voucher/starter';
-@import 'template/checkout/_partials/cart-detailed-totals/starter';
+//@import 'template/checkout/cart/starter';
+//@import 'template/checkout/checkout/starter';
+//@import 'template/checkout/_partials/cart-voucher/starter';
+//@import 'template/checkout/_partials/cart-detailed-totals/starter';
 
 /**
 * MODULES
 **/
-@import 'modules/ps_banner/starter';
-@import 'modules/ps_categorytree/starter';
-@import 'modules/ps_contactinfo/starter';
-@import 'modules/ps_currencyselector/starter';
-@import 'modules/ps_customeraccountlinks/starter';
-@import 'modules/ps_customersignin/starter';
-@import 'modules/ps_customtext/starter';
-@import 'modules/ps_emailsubscription/starter';
-@import 'modules/ps_featuredproducts/starter';
-@import 'modules/ps_languageselector/starter';
-@import 'modules/ps_linklist/starter';
+//@import 'modules/blockreassurance/starter';
+//@import 'modules/ps_banner/starter';
+//@import 'modules/ps_categorytree/starter';
+//@import 'modules/ps_contactinfo/starter';
+//@import 'modules/ps_currencyselector/starter';
+//@import 'modules/ps_customeraccountlinks/starter';
+//@import 'modules/ps_customersignin/starter';
+//@import 'modules/ps_customtext/starter';
+//@import 'modules/ps_emailsubscription/starter';
+//@import 'modules/ps_featuredproducts/starter';
+//@import 'modules/ps_languageselector/starter';
+//@import 'modules/ps_linklist/starter';
 @import 'modules/ps_mainmenu/starter';
-@import 'modules/ps_searchbar/starter';
-@import 'modules/ps_shoppingcart/starter';
-@import 'modules/ps_socialfollow/starter';
+//@import 'modules/ps_searchbar/starter';
+//@import 'modules/ps_shoppingcart/starter';
+//@import 'modules/ps_socialfollow/starter';
+//@import 'modules/ps_sharebuttons/starter';
 
 
 //body{
@@ -109,6 +119,9 @@
             @extend .col-8; 
         }
         
+        &--product{
+            @extend .row; 
+        }        
     }
     &__footer{
         @extend .col-12;
